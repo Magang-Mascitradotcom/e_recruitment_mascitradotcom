@@ -6,7 +6,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
-///////////kkkkkkk
+///////////kkkkkkkk
+/////heessdassess
                     <div class="card-body">
                         <a href="{{ route('biodata.create') }}" class="btn btn-md btn-success mb-3 float-left">BIODATA</a>
                         <a href="{{ route('pendidikan.create') }}" class="btn btn-md btn-success mb-3 float-left">PENDIDIKAN</a>
