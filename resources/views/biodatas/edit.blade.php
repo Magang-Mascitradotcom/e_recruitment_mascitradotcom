@@ -115,6 +115,9 @@
                                 <div class="col-sm-9">
                                     <select name="kabupaten" class="form-select" id="kabupaten" required>
                                         <option value="">PILIH KOTA / KABUPATEN</option>
+                                        @foreach ($regencies as $kabupaten)
+                                        <option value="{{$kabupaten->id}}" {{$kabupaten->id == $biodata->kabupaten ? 'selected' : '' }}>{{$kabupaten->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
