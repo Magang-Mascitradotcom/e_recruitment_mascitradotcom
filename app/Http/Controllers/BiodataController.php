@@ -13,17 +13,11 @@ use App\Models\Village;
 
 class BiodataController extends Controller
 {
-    public function index()
-    {
-        $biodatas = Biodata::latest()->get();
-        return view('biodatas.index', compact('biodatas'));
-    }
-
     public function create()
     {
         $provinces = Province::all();
 
-        return view('biodatas.create', compact('provinces'));
+        return view('form.biodata.create', compact('provinces'));
     }
 
     public function getkabupaten(Request $request)
@@ -126,7 +120,7 @@ class BiodataController extends Controller
         $districts = District::all();
         $villages = Village::all();
         $biodata = Biodata::findOrFail($id);
-        return view('biodatas.edit', compact('biodata','provinces', 'regencies', 'districts', 'villages'));
+        return view('form.biodata.edit', compact('biodata','provinces', 'regencies', 'districts', 'villages'));
     }
 
     public function update(Request $request, $id)
