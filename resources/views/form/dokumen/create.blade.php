@@ -47,11 +47,11 @@
                             <a href="{{ route('home') }}" class="btn btn-md btn-secondary">back</a>
                         </form>
                         <div class="table-responsive mt-3">
-                            <table class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered" style="width: 100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="text-center align-middle" >JENIS</th>
-                                        <th scope="col" class="text-center align-middle" >#</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 50%">JENIS</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 50%">#</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -70,7 +70,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td class="text-center text-mute" colspan="2">Data Pendidikan tidak tersedia</td>
+                                        <td class="text-center text-mute" colspan="2">Data Dokumen tidak tersedia</td>
                                     </tr>
                                     @endforelse
                                 </tbody>
