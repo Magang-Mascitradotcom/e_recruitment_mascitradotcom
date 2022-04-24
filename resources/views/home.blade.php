@@ -11,9 +11,7 @@
                         <a href="{{ route('biodata.create') }}" class="btn btn-md btn-success mb-3 float-left">BIODATA</a>
                         <a href="{{ route('pendidikan.create') }}" class="btn btn-md btn-success mb-3 float-left">PENDIDIKAN</a>
                         <a href="{{ route('dokumen.create') }}" class="btn btn-md btn-success mb-3 float-left">DOKUMEN</a>
-                        <a href="" class="btn btn-md btn-success mb-3 float-left">DOKUMEN</a>
-                        <a href="" class="btn btn-md btn-success mb-3 float-left">DOKUMEN</a>
-                        
+
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered">
                                 <thead>

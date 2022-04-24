@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dokumens', function (Blueprint $table) {
-            $table->id();
-            $table->string('jenis');
-            $table->string('file');
-            $table->timestamps();
+        Schema::table('dokumens', function (Blueprint $table) {
+            $table->string('ekstensi');
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dokumens');
+        Schema::table('dokumens', function (Blueprint $table) {
+            $table->dropColumn(['ekstensi']);
+        });
     }
 };
