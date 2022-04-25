@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color:rgb(255, 210, 126)">
             <div class="container">
                 <a class="navbar-brand " href="{{ url('/') }}">
-                    <img src="/asset/img/logo1.png" alt="" width="100%" height="45" class="d-inline-block align-text-top">
+                    <img src="asset/img/logo1.png" alt="" width="100%" height="45" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
