@@ -89,17 +89,17 @@
                             <a href="{{ route('home') }}" class="btn btn-md btn-secondary">back</a>
                         </form>
                         <div class="table-responsive mt-3">
-                            <table class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered" style="width: 100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="text-center align-middle" >TINGKAT</th>
-                                        <th scope="col" class="text-center align-middle" >JURUSAN</th>
-                                        <th scope="col" class="text-center align-middle" >NAMA SEKOLAH <br> (INSTITUSI)</th>
-                                        <th scope="col" class="text-center align-middle" >KOTA</th>
-                                        <th scope="col" class="text-center align-middle" >NILAI UAN <br> (IPK)</th>
-                                        <th scope="col" class="text-center align-middle" >TANGGAL KELULUSAN</th>
-                                        <th scope="col" class="text-center align-middle" >AKREDITASI</th>
-                                        <th scope="col" class="text-center align-middle" >#</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 5%">TINGKAT</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 15%">JURUSAN</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 15%">NAMA SEKOLAH <br> (INSTITUSI)</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 15%">KOTA</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 10%">NILAI UAN <br> (IPK)</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 15%">TANGGAL KELULUSAN</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 15%">AKREDITASI</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 10%">#</th>
                                     </tr>
                                 </thead>
                                 <tbody>

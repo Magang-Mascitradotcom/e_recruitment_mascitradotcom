@@ -21,7 +21,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('DOKUMEN') }}</div>
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{ route('dokumen.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                             <div class="form-group row mb-2">
                                 <label for="jenis" class="col-sm-3 col-form-label">JENIS</label>
@@ -38,26 +38,41 @@
                                 </div>
                             </div>
                             <div class="form-group row mb-2">
-                                <label for="customFile" class="col-sm-3 col-form-label">FILE</label>
+                                <label for="file" class="col-sm-3 col-form-label">FILE</label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" class="custom-file-input" name="file" id="file">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-md btn-primary">Save</button>
                             <a href="{{ route('home') }}" class="btn btn-md btn-secondary">back</a>
                         </form>
                         <div class="table-responsive mt-3">
-                            <table class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered" style="width: 100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="text-center align-middle" >JENIS</th>
-                                        <th scope="col" class="text-center align-middle" >#</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 50%">JENIS</th>
+                                        <th scope="col" class="text-center align-middle" style="width: 50%">#</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @forelse ($dokumens as $dokumen)
                                     <tr>
-
+                                        <td class="text-center align-middle">{{ $dokumen->jenis }}</td>
+                                        <td class="text-center">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                                action="{{ route('dokumen.destroy', $dokumen->id) }}" method="POST">
+                                                <a href="" class="btn btn-sm btn-primary mb-1 mt-1">PREVIEW</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger mb-1 mt-1">HAPUS</button>
+                                            </form>
+                                            
                                     </tr>
+                                    @empty
+                                    <tr>
+                                        <td class="text-center text-mute" colspan="2">Data Dokumen tidak tersedia</td>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
