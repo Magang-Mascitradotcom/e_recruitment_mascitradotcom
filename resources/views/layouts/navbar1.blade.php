@@ -90,7 +90,7 @@
         </nav>
 
         <main class="py-4 ">
-            @yield('isi')
+            @yield('content')
         </main>
     </div>
 </body>
