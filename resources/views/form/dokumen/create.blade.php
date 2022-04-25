@@ -61,7 +61,7 @@
                                         <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
                                                 action="{{ route('dokumen.destroy', $dokumen->id) }}" method="POST">
-                                                <a href="" class="btn btn-sm btn-primary mb-1 mt-1">PREVIEW</a>
+                                                <a type="button" class="btn btn-sm btn-primary mb-1 mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">PREVIEW</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger mb-1 mt-1">HAPUS</button>
@@ -77,6 +77,24 @@
                             </table>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
                 </div>
             </div>
         </div>
