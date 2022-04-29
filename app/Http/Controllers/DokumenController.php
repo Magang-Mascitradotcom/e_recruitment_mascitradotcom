@@ -10,7 +10,6 @@ class DokumenController extends Controller
 {
     public function create()
     {
-        $dokumens = Dokumen::latest()->get();
         $dokumens = Dokumen::orderBy('created_at', 'DESC')->get();
         return view('form.dokumen.create', compact('dokumens'));
     }
